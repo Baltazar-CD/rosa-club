@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+   <head>
+      <title>▷ Rosa Club | TRABAJA CON NOSOTROS</title>
+      <meta charset="utf-8"/>
+      <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+      <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+      <link rel="stylesheet" href="assets/css/custom-style.css" type="text/css">
+      <link rel="stylesheet" href="assets/css/special-classes.css" type="text/css">
+   </head>
+   <body>
+      <!-- Login Form section-->
+      <section class="login-form d-flex align-items-center">
+            <div class="container">
+               <div class="login-form-title text-center">
+                  <br><br><br>
+                  <a href="index.html">
+                  <figure class="login-page-logo">
+                     <img class="img-fluid" src="assets/images/logo.png" alt="">
+                  </figure>
+                  </a>
+
+                  <h2 class="text-white">TRABAJE CON NOSOTROS</h2>
+                  <p class="text-white">Llene el siguiente formulario con sus datos por favor</p>
+               </div>
+                  <div class="login-form-box">
+                     <div class="login-card">
+                        <form id="formulariowtsp" action="" class="form formulariowtsp">
+                           <div class="form-group">
+                             <label for="exampleInputEmail1"><i class="fa-solid fa-user"></i> NOMBRE COMPLETO</label>
+                             <input class="input-field form-control" type="text" id="nombre" placeholder="Ingresa tu nombre">
+                           </div>
+
+                           <div class="form-group">
+                              <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> CORREO ELECTRÓNICO</label>
+                            <input class="input-field form-control" type="text" id="correo" placeholder="Ingresa tu correo electrónico">
+                           </div>
+
+                           <div class="form-group">
+                             <label for="exampleInputEmail1"><i class="fa-solid fa-phone"></i> TELÉFONO DE CONTACTO</label>
+                             <input class="input-field form-control" type="text" id="telefono" placeholder="Ingresa tu teléfono">
+                           </div>
+
+                           <div class="form-group">
+                             <label for="exampleInputEmail1"><i class="fa-solid fa-location-dot"></i> DIRECCIÓN</label>
+                             <input class="input-field form-control" type="text" id="direccion" placeholder="Ingresa tu dirección">
+                           </div>
+
+                           <div class="form-group">
+                             <label for="exampleInputEmail1"><i class="fa-solid fa-maximize"></i> TUS MEDIDAS</label>
+                             <input class="input-field form-control" type="text" id="medidas" placeholder="Ingresa tus medidas">
+                           </div>
+
+                           <div class="form-group">
+                             <label for="exampleInputEmail1"><i class="fa-solid fa-eye"></i> COLOR DE OJOS</label>
+                             <input class="input-field form-control" type="text" id="ojos" placeholder="Ingresa tu color de ojos">
+                           </div>
+
+                           <div class="form-group">
+                             <label for="exampleInputEmail1"><i class="fa-solid fa-bookmark"></i> LOS SERVICIOS QUE PRESTA</label>
+                             <input class="input-field form-control" type="text" id="servicios" placeholder="Ingresa los servicios que prestas">
+                           </div>
+
+                              <br>
+
+                           <button type="submit" name="submit" id="submit" class="btn btn-primary">Enviar Datos Por WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+                        </form>
+                     </div>
+                     <div class="join-now-outer text-center"><br><br>
+                        <a class="text-white" href="index.html">Copyright ©2022 RosaClub</a><br>
+                     </div>
+                  </div>   
+            </div>
+      </section>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="assets/js/wow.js"></script>
+
+        <script>
+        var formulariowtsp = document.getElementById('formulariowtsp');
+        var sendbttn = document.querySelector('#submit');
+
+
+        sendbttn.addEventListener('click' , EnviarMensaje)
+
+        function EnviarMensaje(){
+            let nombre = document.querySelector('#nombre').value;
+            let correo = document.querySelector('#correo').value;
+            let telefono = document.querySelector('#telefono').value;
+            let direccion = document.querySelector('#direccion').value;
+            let medidas = document.querySelector('#medidas').value;
+            let ojos = document.querySelector('#ojos').value;
+            let servicios = document.querySelector('#servicios').value;
+
+        
+            let url = "https://api.whatsapp.com/send?phone=573192307274&text=Hola%20Deseo%20Trabar%20con%20Ustedes" + "%0A%0A" +"Nombre: %0A" + nombre + "%0ACorreo: %0A" + correo + "%0A" + "%0ATeléfono: %0A" + telefono + "%0A" + "%0ADirección: %0A" + direccion + "%0A" + "%0AMis Medidas: %0A" + medidas + "%0A" + "%0AColor de Ojos: %0A" + ojos + "%0A" + "%0AServicios qeu presto: %0A" + servicios + "%0A";
+            window.open(url);
+        }
+        </script>
+
+
+      <script>new WOW().init();</script>
+      <script src="assets/js/counter-script.js"></script>
+      <script src="https://kit.fontawesome.com/73247fc3fc.js" crossorigin="anonymous"></script>
+
+   </body>
+</html>
